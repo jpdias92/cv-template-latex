@@ -1,0 +1,11 @@
+.DS_Store
+template.aux
+template.bbl
+template.bcf
+template.blg
+template.fdb_latexmk
+template.fls
+template.log
+template.out
+template.run.xml
+.bash_history
