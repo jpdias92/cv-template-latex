@@ -25,5 +25,5 @@ RUN tlmgr install latexmk
 RUN tlmgr install biber
 RUN tlmgr install fontspec clearsans xkeyval fontawesome pstricks xcolor
 RUN tlmgr install luaotfload
-RUN tlmgr install pgf textpos etoolbox ifmtarg forloop marvosym parskip enumitem smartdiagram xstring biblatex logreq biblatex-ieee
+RUN tlmgr install pgf textpos etoolbox ifmtarg forloop marvosym parskip enumitem smartdiagram xstring biblatex logreq biblatex-ieee ragged2e
 VOLUME ["/data"]
