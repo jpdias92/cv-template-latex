@@ -208,21 +208,6 @@
 	}
 }
 
-
-% Command for printing skill progress bars
-\newcommand\programming[1]{ 
-	\renewcommand{\programming}{
-		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
-			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-				\node [above right] at (0,\i+0.35) {\x};
-			}
-		\end{tikzpicture}
-	}
-}
-
 \newcommand\projects[1]{ 
 	\renewcommand{\projects}{
 		{#1}
@@ -353,19 +338,16 @@
 			
 		\vspace{3mm}
 		
-		{\large \textbf{Programming}} 
-	
-		%\programming
+      	\profilesection{Languages}{2.5cm}
+      	
+      	\languages	  
+      
 }
 
 %----------------------------------------------------------------------------------------
 %  SIDEBAR LAYOUT 2nd page
 %----------------------------------------------------------------------------------------
 \newcommand{\makeprofilesecond}{
-
-	{\large \textbf{Languages}} 
-	
-	\languages	
 
 	\profilesection{Projects}{3cm} 
 	
