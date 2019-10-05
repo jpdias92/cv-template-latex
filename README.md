@@ -17,6 +17,10 @@ This is the 2 page CV template that I use for my own CV.
 2. Compile the LaTeX source, inside a container, using lualatex (**recommended**): `./docker/latexdockercmd.sh latexmk -pdflatex=lualatex -cd -f -interaction=batchmode -pdf template.tex`
    * Alternatively, compile with xelatex: `./docker/latexdockercmd.sh latexmk -pdflatex=xelatex -cd -f -interaction=batchmode -pdf template.tex`
 
+#### TeXstudio Integration
+
+* [Mac](docs/docker_texstudio_integration.md#mac)
+
 ### Windows
 
 1. Install [MiKTeX](https://miktex.org/howto/install-miktex), a TeX distribution for Windows that includes a large number of major packages.
@@ -27,7 +31,7 @@ Once both the distribution and editor are installed, clone this repository using
 
 ## Troubleshooting
 
-* [LaTeX Error: File '<foo_bar>' not found.](./troubleshooting.md#latex-error-file-ragged2esty-not-found)
+* [LaTeX Error: File '<foo_bar>' not found.](docs/troubleshooting.md#latex-error-file-ragged2esty-not-found)
 
 ## Built With
 
