@@ -1,26 +1,22 @@
-docker build -t cv-latex-docker-compiler .
+# CV Template in LaTeX
 
+This is the 2 page CV template that I use for my own CV.
 
-./docker/latexdockercmd.sh latexmk -pdflatex=lualatex -cd -f -interaction=batchmode -pdf template.tex
-./docker/latexdockercmd.sh latexmk -e '$pdflatex=q/xelatex %O %S/' -cd -f -interaction=batchmode -pdf template.tex
+## Usage
 
+### Compile inside a Docker container
 
+#### Prerequisites
 
+* Install [Docker](https://www.docker.com/) for your OS.
 
+#### Generate the PDF
 
+1. Build an image from the Dockerfile with the command `docker build -t cv-latex-docker-compiler .`
+2. Compile the LaTeX source, inside a container, using lualatex (**recommended**): `./docker/latexdockercmd.sh latexmk -pdflatex=lualatex -cd -f -interaction=batchmode -pdf template.tex`
+   * Alternatively, compile with xelatex: `./docker/latexdockercmd.sh latexmk -pdflatex=xelatex -cd -f -interaction=batchmode -pdf template.tex`
 
-
-# LaTeX resume template
-
-This is the template I use for my own resume. I've compiled it with elements from several templates, including:
-
-1. [Carmine Spagnuolo's Twenty Seconds Curriculum Vitae](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
-2. [Carmine Benedetto's Smart Fancy LaTeX CV](https://github.com/neoben/smart-fancy-latex-cv)
-3. [Adrien Friggeri's Fancy CV](https://www.sharelatex.com/templates/52fb8c1f33621a613683ecad)
-
-![CV Screenshot](screen.png)
-
-## Installating pre-requisites (Windows)
+### Windows
 
 1. Install [MiKTeX](https://miktex.org/howto/install-miktex), a TeX distribution for Windows that includes a large number of major packages.
 
@@ -28,21 +24,23 @@ This is the template I use for my own resume. I've compiled it with elements fro
 
 Once both the distribution and editor are installed, clone this repository using `git clone` and open the template.tex file in your editor. You're good to go!
 
+## Built With
+
+* [LaTeX](https://www.latex-project.org/)
+* [Docker](https://www.docker.com/)
+* [TeXstudio](http://www.texstudio.org/) - The IDE used
+
+## Authors
+
+* **Joao Dias** - [jpdias92](https://github.com/jpdias92)
+
+## Acknowledgments
+
+I've created this CV template based on many elements taken from several other templates, including:
+* [Carmine Spagnuolo's Twenty Seconds Curriculum Vitae](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
+* [Carmine Benedetto's Smart Fancy LaTeX CV](https://github.com/neoben/smart-fancy-latex-cv)
+* [Adrien Friggeri's Fancy CV](https://www.sharelatex.com/templates/52fb8c1f33621a613683ecad)
+
 ## License
 
-```
-Copyright 2016 Harshavardhan Gadgil
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
-
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
