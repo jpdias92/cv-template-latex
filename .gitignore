@@ -1,4 +1,9 @@
 .DS_Store
+
+# texlive
+.texlive*
+
+# LaTeX generated files
 template.aux
 template.bbl
 template.bcf
@@ -8,4 +13,4 @@ template.fls
 template.log
 template.out
 template.run.xml
-.bash_history
+

@@ -12,7 +12,8 @@ This is the 2 page CV template that I use for my own CV.
 
 #### Generate the PDF
 
-1. Build an image from the Dockerfile with the command `docker build -t cv-latex-docker-compiler .`
+1. Pull the latest Docker image from Docker Hub, with `docker pull jpdias92/cv-template-latex`
+   * Alternatively, build the image from the Dockerfile with `(cd docker;docker build -t jpdias92/cv-template-latex .)`
 2. Compile the LaTeX source, inside a container, using lualatex (**recommended**): `./docker/latexdockercmd.sh latexmk -pdflatex=lualatex -cd -f -interaction=batchmode -pdf template.tex`
    * Alternatively, compile with xelatex: `./docker/latexdockercmd.sh latexmk -pdflatex=xelatex -cd -f -interaction=batchmode -pdf template.tex`
 
@@ -24,6 +25,10 @@ This is the 2 page CV template that I use for my own CV.
 
 Once both the distribution and editor are installed, clone this repository using `git clone` and open the template.tex file in your editor. You're good to go!
 
+## Troubleshooting
+
+* [LaTeX Error: File '<foo_bar>' not found.](./troubleshooting.md#latex-error-file-ragged2esty-not-found)
+
 ## Built With
 
 * [LaTeX](https://www.latex-project.org/)
@@ -32,9 +37,11 @@ Once both the distribution and editor are installed, clone this repository using
 
 ## Authors
 
-* **Joao Dias** - [jpdias92](https://github.com/jpdias92)
+**João Dias** - [jpdias92](https://github.com/jpdias92)
 
 ## Acknowledgments
+
+[blang/latex-docker](https://github.com/blang/latex-docker) - Docker-based latex compilation
 
 I've created this CV template based on many elements taken from several other templates, including:
 * [Carmine Spagnuolo's Twenty Seconds Curriculum Vitae](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
