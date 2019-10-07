@@ -208,12 +208,29 @@
 	}
 }
 
-\newcommand\projects[1]{ 
-	\renewcommand{\projects}{
+\newcommand\certifications[1]{ 
+	\renewcommand{\certifications}{
 		{#1}
 	}
 }
 
+\newcommand\sideprojects[1]{ 
+	\renewcommand{\sideprojects}{
+		{#1}
+	}
+}
+
+\newcommand\conferences[1]{ 
+	\renewcommand{\conferences}{
+		{#1}
+	}
+}
+
+\newcommand\books[1]{ 
+	\renewcommand{\books}{
+		{#1}
+	}
+}
 
 %----------------------------------------------------------------------------------------
 %  Header
@@ -330,7 +347,7 @@
 		%\vspace{4mm}
 		\profilesection{Skills}{4cm}
 		
-		{\large \textbf{Overview}}
+		{\large \textbf{Top Skills Overview}}
 	
 		\skills
 			
@@ -349,9 +366,23 @@
 %----------------------------------------------------------------------------------------
 \newcommand{\makeprofilesecond}{
 
-	\profilesection{Projects}{3cm} 
-	
-	\projects
+    \profilesection{Certifications}{1.9cm} 
+	\certifications
+
+	\vspace{3mm}
+
+    \profilesection{Side Projects}{2cm} 
+	\sideprojects
+
+	\vspace{3mm}
+
+    \profilesection{Technical Books}{1.2cm}
+	\books
+
+	\vspace{3mm}
+
+    \profilesection{Conferences}{2.3cm}
+	\conferences
 }
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
