@@ -4,13 +4,16 @@
 .texlive*
 
 # LaTeX generated files
-template.aux
-template.bbl
-template.bcf
-template.blg
-template.fdb_latexmk
-template.fls
-template.log
-template.out
-template.run.xml
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
 
+# CVs
+cvs/*
+!cvs/template-cv
