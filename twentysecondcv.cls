@@ -208,29 +208,10 @@
 	}
 }
 
-\newcommand\certifications[1]{ 
-	\renewcommand{\certifications}{
-		{#1}
-	}
-}
-
-\newcommand\sideprojects[1]{ 
-	\renewcommand{\sideprojects}{
-		{#1}
-	}
-}
-
-\newcommand\conferences[1]{ 
-	\renewcommand{\conferences}{
-		{#1}
-	}
-}
-
-\newcommand\books[1]{ 
-	\renewcommand{\books}{
-		{#1}
-	}
-}
+\newcommand{\certifications}[1]{\renewcommand{\certifications}{#1}}
+\newcommand{\sideprojects}[1]{\renewcommand{\sideprojects}{#1}}
+\newcommand{\conferences}[1]{\renewcommand{\conferences}{#1}}
+\newcommand{\books}[1]{\renewcommand{\books}{#1}}
 
 %----------------------------------------------------------------------------------------
 %  Header
@@ -355,9 +336,9 @@
 			
 		\vspace{3mm}
 		
-      	\profilesection{Languages}{2.5cm}
+    \profilesection{Languages}{2.5cm}
       	
-      	\languages	  
+    \languages	  
       
 }
 
@@ -366,23 +347,35 @@
 %----------------------------------------------------------------------------------------
 \newcommand{\makeprofilesecond}{
 
+	\ifthenelse{\equal{\expandonce\certifications}{}}{}
+	{
     \profilesection{Certifications}{1.9cm} 
-	\certifications
+		\certifications
+	}
 
 	\vspace{3mm}
 
+	\ifthenelse{\equal{\expandonce\sideprojects}{}}{}
+	{
     \profilesection{Side Projects}{2cm} 
-	\sideprojects
+		\sideprojects
+	}
 
 	\vspace{3mm}
 
+	\ifthenelse{\equal{\expandonce\books}{}}{}
+	{
     \profilesection{Technical Books}{1.2cm}
-	\books
+		\books
+	}
 
 	\vspace{3mm}
 
+	\ifthenelse{\equal{\expandonce\conferences}{}}{}
+	{
     \profilesection{Conferences}{2.3cm}
-	\conferences
+		\conferences
+	}
 }
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
