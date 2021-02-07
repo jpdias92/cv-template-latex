@@ -174,6 +174,7 @@
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvnationality}[1]{\renewcommand{\cvnationality}{#1}}
 
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
@@ -187,7 +188,8 @@
 \newcommand{\mothertongue}[1]{\renewcommand{\mothertongue}{#1}}
 \newcounter{barcount}
 \newcommand\languages[1]{ 
-	\renewcommand{\languages}{
+	\renewcommand{\languages}{%
+
 		\textbf{Mother Tongue:} \mothertongue
 		
 		\textbf{Other languages:}
@@ -321,7 +323,15 @@
 						\hspace{3mm} $\huge$ \textnormal{\textcolor{linkedin}{\faLinkedin}}
 					\end{array}
 				$} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
-			}    
+			}
+			\ifthenelse{\equal{\cvnationality}{}}{}
+			{
+				{$
+					\begin{array}{l}
+						\hspace{3mm} $\huge$ \textnormal{\faFlagO}
+					\end{array}
+				$} & \cvnationality \\
+			}
 		\end{tabular}
 	
 		%------------------------------------------------
@@ -336,22 +346,24 @@
 			
 		\vspace{3mm}
 		
-    \profilesection{Languages}{2.5cm}
-      	
-    \languages	  
-      
+		\ifthenelse{\equal{\expandonce\certifications}{}}{}
+		{
+			\profilesection{Certifications}{1.9cm} 
+			\certifications
+		}
+
 }
 
 %----------------------------------------------------------------------------------------
 %  SIDEBAR LAYOUT 2nd page
+%
+%  You can easily switch sections between each page's sidebar by placing them inside
+%  \makeprofilefirst or \makeprofilesecond
 %----------------------------------------------------------------------------------------
 \newcommand{\makeprofilesecond}{
-
-	\ifthenelse{\equal{\expandonce\certifications}{}}{}
-	{
-    \profilesection{Certifications}{1.9cm} 
-		\certifications
-	}
+	
+	\profilesection{Languages}{2.5cm}
+	\languages
 
 	\vspace{3mm}
 
